@@ -1,10 +1,10 @@
-function astronomyReducer(state= { all: [ ]}, action ) {
+function technologyReducer(state= { all: [ ]}, action ) {
     switch (action.type) {
-        case "FETCH_ASTRONOMY_PIC":
+        case "FETCH_TECHNOLOGY":
             return {...state, all: action.payload};
 
             default:
                 return state;
     }
 }
-export default astronomyReducer;
+export default technologyReducer;
