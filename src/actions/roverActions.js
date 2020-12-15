@@ -4,11 +4,11 @@ export const getCuriosity = () => {
         .then((resp) => resp.json())
     .then((result) => {
         const curiObj = {
-            cameraName = result.camera_full_name, 
-            cameraId = result.camera_id,
-            roverName = result.rover_name,
-            roverId = result.rover_id,
-            imgSrc = result.img_src
+            cameraName: result.camera_full_name, 
+            cameraId: result.camera_id,
+            roverName: result.rover_name,
+            roverId: result.rover_id,
+            imgSrc: result.img_src
         }
         dispatch({ type: "FETCH_CURIOSITY", payload: curiObj.slice(0,5)})
         }
@@ -22,11 +22,11 @@ export const getOpportunity = () => {
         .then((resp) => resp.json())
         .then((result) => {
             const oppObj = {
-            cameraName = result.camera_full_name, 
-            cameraId = result.camera_id,
-            roverName = result.rover_name,
-            roverId = result.rover_id,
-            imgSrc = result.img_src
+            cameraName: result.camera_full_name, 
+            cameraId: result.camera_id,
+            roverName: result.rover_name,
+            roverId: result.rover_id,
+            imgSrc: result.img_src
             }
         dispatch({ type: "FETCH_OPPORTUNITY", payload: oppObj.slice(0,5)})
         }
@@ -40,11 +40,11 @@ export const getSpirit = () => {
         .then((resp) => resp.json())
         .then((result) => {
             const spiritObj = {
-            cameraName = result.camera_full_name, 
-            cameraId = result.camera_id,
-            roverName = result.rover_name,
-            roverId = result.rover_id,
-            imgSrc = result.img_src
+            cameraName: result.camera_full_name, 
+            cameraId: result.camera_id,
+            roverName: result.rover_name,
+            roverId: result.rover_id,
+            imgSrc: result.img_src
             }
         dispatch({ type: "FETCH_SPIRIT", payload: spiritObj.slice(0,5)})
         }
