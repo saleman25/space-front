@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-// import { getTechnology } from './actions/technologyActions';
+import { connect } from 'react-redux';
+import { getTechnology } from '../actions/technologyActions';
 
 class Technology extends Component {
 
 // fetch call 
-// componentDidMount(){
-//     this.props.getTechnology()
-// }
+componentDidMount(){
+    this.props.getTechnology();
+}
 
 // another function abt the loading of the tech which is whats gonna render
 
@@ -14,11 +15,15 @@ class Technology extends Component {
 render(){
     return (
         <div>
-            teehee
+            <h1>{this.props.technology.title}</h1>
+            <h2>{this.props.technology.status}</h2>
+            <p>{this.props.technology.description}</p>
         </div>
     )
 }
 
 }
 
-export default Technology
+const mapStateToProps = state => ({ technology: state.technology.all })
+
+export default connect(mapStateToProps, { getTechnology })(Technology);

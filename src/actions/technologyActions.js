@@ -8,11 +8,11 @@ export const getTechnology = () => {
         .then((resp) => resp.json())
         .then((result) =>{
         const techObj = {
-            title = result.title,
-            description = result.description,
-            startDate = result.start_date,
-            endDate = result.end_date,
-            status = result.status
+            title: result.title,
+            description: result.description,
+            startDate: result.start_date,
+            endDate: result.end_date,
+            status: result.status
         }
         dispatch({ type: "FETCH_TECHNOLOGY", payload: techObj.slice(0,5)})
         }

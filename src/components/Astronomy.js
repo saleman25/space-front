@@ -7,14 +7,11 @@ class Astronomy extends Component {
 // fetch call 
 componentDidMount(){
     this.props.getAstronomy();
-    console.log(this.props.astronomy)
 }
 
 srcTag(){
-    console.log(this.props.astronomy)
     if (this.props.astronomy.url){
     if (this.props.astronomy.url.includes("youtube")){
-        console.log(this.props.astronomy.url)
         return(
             <video>
             <iframe src={this.props.astronomy.url}></iframe>
