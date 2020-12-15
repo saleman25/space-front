@@ -9,3 +9,4 @@ export default function astronomyContainer(){
 }
 
 // this is going to link to /astronomy
+// i think its an onclick that will link to /astronomy

@@ -7,3 +7,5 @@ export default function techContainer(){
         </div>
     )
 }
+
+// onclick so it can link to tech page?

@@ -7,3 +7,5 @@ export default function roverContainer(){
         </div>
     )
 }
+
+// on click, n then three buttons will appear? for each rover n then itll link to each corresponding rover link
