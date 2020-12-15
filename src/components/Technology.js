@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getTechnology } from '../actions/technologyActions';
+import { getTechOne } from '../actions/technologyActions';
+import { getTechTwo } from '../actions/technologyActions';
+import { getTechThree } from '../actions/technologyActions';
+import { getTechFour } from '../actions/technologyActions';
 
 class Technology extends Component {
 
