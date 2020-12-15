@@ -6,7 +6,6 @@ import Astronomy from './components/Astronomy';
 import Technology from './components/Technology';
 import Rover from './components/Rover'
 
-// gotta use connect?
 
 function App() {
   return (
