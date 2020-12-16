@@ -11,10 +11,15 @@ class Technology extends Component {
 // fetch call 
 componentDidMount(){
     this.props.getTechnology();
-    console.log(this.props)
+    this.props.getTechOne();
+    this.props.getTechTwo();
+    this.props.getTechThree();
+    this.props.getTechFour();
 }
 
-// another function abt the loading of the tech which is whats gonna render
+displayTech(){
+    return this.props.projects.map(e => <Technology tech={e} /> )
+}
 
 
 render(){
@@ -32,4 +37,4 @@ render(){
 
 const mapStateToProps = state => ({ technology: state.technology.all })
 
-export default connect(mapStateToProps, { getTechnology })(Technology);
+export default connect(mapStateToProps, { getTechnology, getTechOne, getTechTwo, getTechThree, getTechFour })(Technology);

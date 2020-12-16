@@ -1,3 +1,5 @@
+const initialState = {tech: null, tech1: null, tech2: null, tech3: null, tech4: null}
+
 function technologyReducer(state= { all: [ ]}, action ) {
     switch (action.type) {
         case "FETCH_TECHNOLOGY":

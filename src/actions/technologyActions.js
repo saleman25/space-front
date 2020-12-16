@@ -7,7 +7,6 @@ export const getTechnology = () => {
        return fetch(`https://api.nasa.gov/techport/api/projects/33080?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) =>{
-            console.log(result)
         const techObj = {
             title: result.project.title,
             description: result.project.description,
@@ -26,7 +25,6 @@ export const getTechOne = () => {
        return fetch(`https://api.nasa.gov/techport/api/projects/11692?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) =>{
-            console.log(result)
         const techObj = {
             title: result.project.title,
             description: result.project.description,
@@ -45,7 +43,6 @@ export const getTechTwo = () => {
        return fetch(`https://api.nasa.gov/techport/api/projects/14656?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) =>{
-            console.log(result)
         const techObj = {
             title: result.project.title,
             description: result.project.description,
@@ -61,10 +58,9 @@ export const getTechTwo = () => {
 
 export const getTechThree = () => {
     return (dispatch) => {
-       return fetch(`https://api.nasa.gov/techport/api/projects/93857?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
+       return fetch(`https://api.nasa.gov/techport/api/projects/93851?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) =>{
-            console.log(result)
         const techObj = {
             title: result.project.title,
             description: result.project.description,
@@ -83,7 +79,6 @@ export const getTechFour = () => {
        return fetch(`https://api.nasa.gov/techport/api/projects/94151?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) =>{
-            console.log(result)
         const techObj = {
             title: result.project.title,
             description: result.project.description,
