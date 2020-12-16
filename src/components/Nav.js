@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/Nav.css';
 import { Link } from 'react-router-dom';
+import Dropdown from '../components/Dropdown';
 
 export default function Nav(){
     return (
@@ -14,6 +15,10 @@ export default function Nav(){
                     {/* <div>
                         <Dropdown />
                     </div> */}
+                    <Link to="/curiosity">Curiosity</Link>
+                    <Link to="/opportunity">Opportunity</Link>
+                    <Link to="/spirit">Spirit</Link>
+                    
                 </li>
             </ul>
         </div>

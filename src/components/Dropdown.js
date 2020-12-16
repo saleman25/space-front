@@ -7,3 +7,4 @@ const Dropdown = () => {
         </ul>
     )
 }
+export default Dropdown

@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Astronomy from './components/Astronomy';
 import Technology from './components/Technology';
 import Rover from './components/Rover'
+import Rovies from './containers/Roviescontainer'
 
 
 function App() {
@@ -16,7 +17,10 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/astronomy" component={Astronomy} />
           <Route exact path="/technology" component={Technology} />
-          <Route exact path="/rover" component={Rover} />
+          <Route exact path="/rover" component={Rovies} />
+          <Route exact path="/curiosity" component={Rovies} />
+          <Route exact path="/opportunity" component={Rovies} />
+          <Route exact path="/spirit" component={Rovies} />
         </Switch>
       </Router>
     </div>
