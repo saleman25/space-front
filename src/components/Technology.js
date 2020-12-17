@@ -17,9 +17,6 @@ componentDidMount(){
     this.props.getTechFour();
 }
 
-displayTech(){
-    return this.props.projects.map(e => <Technology tech={e} /> )
-}
 
 
 render(){

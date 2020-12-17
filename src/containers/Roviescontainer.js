@@ -4,6 +4,7 @@ import { getCuriosity } from '../actions/roverActions';
 import { getOpportunity } from '../actions/roverActions';
 import { getSpirit } from '../actions/roverActions';
 import Rover from '../components/Rover';
+import { Link } from 'react-router-dom';
 
 class Rovies extends Component {
 
@@ -18,13 +19,17 @@ displayRover(){
     return this.props.rover.map(e => <Rover rovies={e} /> )
 }
 
+handleOnClickCuri() {
+    
+}
+
 render(){
-    console.log(this.props.rover)
     return (
         <div>
-            <div>curiosity</div>
-            <div>opportunity</div>
-            <div>spirit</div>
+            <h1>Which Rover Pictures Would You Like to See?</h1>
+            <Link to="/curiosity">Curiosity</Link>
+            <Link to="/opportunity">Opportunity</Link>
+            <Link to="/spirit">Spirit</Link>
         </div>
     )
 }

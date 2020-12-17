@@ -1,10 +1,13 @@
 import '../css/roverdiv.css';
+import { Link } from 'react-router-dom';
 
 export default function roverContainer(){
     return (
-        <div class='rover'>
-            rovies hehe
-        </div>
+        <Link to="/rover" style={{ textDecoration: 'none' }}>
+        <span className="rover" style={{"display": "block"}}>
+            rovies heheheh
+        </span>
+        </Link>
     )
 }
 

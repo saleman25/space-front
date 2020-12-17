@@ -1,6 +1,3 @@
-// https://api.nasa.gov/techport/api/projects/{id_parameter}?api_key=DEMO_KEY
-// figure out what u want yr parameters to be 
-
 
 export const getTechnology = () => {
     return (dispatch) => {
@@ -91,3 +88,5 @@ export const getTechFour = () => {
         );
     };
 };
+
+

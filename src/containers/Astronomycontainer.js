@@ -1,10 +1,15 @@
 import '../css/astronomydiv.css';
+import { Link } from 'react-router-dom';
 
 export default function astronomyContainer(){
     return (
-        <div class='astronomy'>
-            yall wanna see the pic of the day
-        </div>
+        
+    <Link to="/astronomy" style={{ textDecoration: 'none' }}>
+    <span className="astronomy" style={{"display": "block"}}>
+        Wanna see astronomy?
+    </span>
+    </Link>
+        
     )
 }
 
