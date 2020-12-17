@@ -31,34 +31,28 @@ render(){
     return (
         <div>
             <h1>Which Rover Pictures Would You Like to See?</h1>
-            <div class='roviesdivies'>
+                <div class='roviesdivies'>
 
-            <Link to="/curiosity" style={{ textDecoration: 'none' }}>
-    <span className="curiosity" style={{"display": "block"}}>
-        curiosity
-    </span>
-    </Link>
+                    <Link to="/curiosity" style={{ textDecoration: 'none' }}>
+                        <span className="curiosity" style={{"display": "block"}}>
+                            Curiosity
+                        </span>
+                    </Link>
 
-    <Link to="/opportunity" style={{ textDecoration: 'none' }}>
-    <span className="opportunity" style={{"display": "block"}}>
-        opportunity
-    </span>
-    </Link>
-
-
-    <Link to="/spirit" style={{ textDecoration: 'none' }}>
-    <span className="spirit" style={{"display": "block"}}>
-        spirit
-    </span>
-    </Link>
+                    <Link to="/opportunity" style={{ textDecoration: 'none' }}>
+                        <span className="opportunity" style={{"display": "block"}}>
+                            Opportunity
+                        </span>
+                    </Link>
 
 
+                    <Link to="/spirit" style={{ textDecoration: 'none' }}>
+                        <span className="spirit" style={{"display": "block"}}>
+                            Spirit
+                        </span>
+                    </Link>
 
-
-
-
-
-            </div>
+                </div>
         </div>
     )
 }

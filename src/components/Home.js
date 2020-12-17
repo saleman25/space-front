@@ -9,12 +9,12 @@ export default function Home(){
     return (
         <div>
             <h1>Welcome</h1>
-            <br></br>
-            <div class= 'divies'>
-            < Astronomycontainer />
-            < Rovercontainer />
-            < Techcontainer />
-            </div>
+                <br></br>
+                    <div class= 'divies'>
+                        < Astronomycontainer />
+                        < Rovercontainer />
+                        < Techcontainer />
+                    </div>
             
         </div>
     )

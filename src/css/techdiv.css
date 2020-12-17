@@ -11,4 +11,9 @@
     background-position: center;
     background-size: cover;
     color: white;
+    transition: height 2s;
+}
+
+.technology:hover {
+    height: 300px
 }
