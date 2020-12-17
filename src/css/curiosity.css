@@ -1,4 +1,4 @@
-.technology{
+.curiosity{
     border-style: solid;
     border-color: black;
     width: 15vw;
@@ -6,9 +6,9 @@
     margin-left: 50px;
     margin-right: 50px;
     text-align: center;
-    background-image: url("../images/tech.jpg");
+    background-image: url("../images/curiosity.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: white;
+    color: black;
 }

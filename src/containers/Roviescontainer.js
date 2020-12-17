@@ -5,6 +5,10 @@ import { getOpportunity } from '../actions/roverActions';
 import { getSpirit } from '../actions/roverActions';
 import Rover from '../components/Rover';
 import { Link } from 'react-router-dom';
+import '../css/roviesdivies.css';
+import '../css/curiosity.css';
+import '../css/opportunity.css';
+import '../css/spirit.css';
 
 class Rovies extends Component {
 
@@ -27,9 +31,34 @@ render(){
     return (
         <div>
             <h1>Which Rover Pictures Would You Like to See?</h1>
-            <Link to="/curiosity">Curiosity</Link>
-            <Link to="/opportunity">Opportunity</Link>
-            <Link to="/spirit">Spirit</Link>
+            <div class='roviesdivies'>
+
+            <Link to="/curiosity" style={{ textDecoration: 'none' }}>
+    <span className="curiosity" style={{"display": "block"}}>
+        curiosity
+    </span>
+    </Link>
+
+    <Link to="/opportunity" style={{ textDecoration: 'none' }}>
+    <span className="opportunity" style={{"display": "block"}}>
+        opportunity
+    </span>
+    </Link>
+
+
+    <Link to="/spirit" style={{ textDecoration: 'none' }}>
+    <span className="spirit" style={{"display": "block"}}>
+        spirit
+    </span>
+    </Link>
+
+
+
+
+
+
+
+            </div>
         </div>
     )
 }

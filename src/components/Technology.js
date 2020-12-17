@@ -17,7 +17,9 @@ componentDidMount(){
     this.props.getTechFour();
 }
 
-
+displayTech(){
+    console.log(this.props.technology)
+}
 
 render(){
     return (

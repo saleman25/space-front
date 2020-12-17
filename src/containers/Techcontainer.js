@@ -6,10 +6,9 @@ export default function techContainer(){
         
         <Link to="/technology" style={{ textDecoration: 'none' }}>
         <span className="technology" style={{"display": "block"}}>
-            techies
+            Technologies
         </span>
         </Link>
     )
 }
 
-// onclick so it can link to tech page?

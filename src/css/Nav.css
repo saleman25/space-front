@@ -1,5 +1,5 @@
 .topnav {
-    background-color: #006666;
+    background-color: #0e0e3f;
     overflow: hidden;
 
   }
@@ -11,21 +11,22 @@
     text-align: center;
     padding: 14px 16px;
     border-style: solid;
-    border-color: #008080;
+    border-color: rgb(41, 40, 40);
     border-width: thin;
     text-decoration: none;
     font-size: 16px;
-
   }
 
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color:  #b3ffff;
-    color: black;
+    background-color:  #5858da;
+    color: white;
   }
 
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color:  #00b3b3;
+    background-color:  #5858da;
     color: white;
   }
+
+ 

@@ -6,12 +6,9 @@ export default function astronomyContainer(){
         
     <Link to="/astronomy" style={{ textDecoration: 'none' }}>
     <span className="astronomy" style={{"display": "block"}}>
-        Wanna see astronomy?
+        Astronomy Picture of the Day
     </span>
     </Link>
         
     )
 }
-
-// this is going to link to /astronomy
-// i think its an onclick that will link to /astronomy

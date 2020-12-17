@@ -5,10 +5,9 @@ export default function roverContainer(){
     return (
         <Link to="/rover" style={{ textDecoration: 'none' }}>
         <span className="rover" style={{"display": "block"}}>
-            rovies heheheh
+            Mars Rovers
         </span>
         </Link>
     )
 }
 
-// on click, n then three buttons will appear? for each rover n then itll link to each corresponding rover link
