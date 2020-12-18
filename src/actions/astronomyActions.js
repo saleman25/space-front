@@ -16,3 +16,6 @@ export const getAstronomy = () => {
     };
 };
 
+// fetch(`localhost:3000/astronomy)
+// .then(resp) => resp.json
+// .then(result) => 

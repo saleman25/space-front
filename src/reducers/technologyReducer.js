@@ -1,21 +1,21 @@
-const initialState = {}
+const initialState = {tech: []}
 
-function technologyReducer(state= { all: [ ]}, action ) {
+function technologyReducer(state= initialState, action ) {
     switch (action.type) {
         case "FETCH_TECHNOLOGY":
-            return {...state, all: action.payload};
+            return {...state, tech: [...state.tech, action.payload]};
 
             case "FETCH_TECH1":
-            return {...state, all: action.payload};
+            return {...state, tech: [...state.tech, action.payload]};
 
             case "FETCH_TECHN2":
-            return {...state, all: action.payload};
+            return {...state, tech: [...state.tech, action.payload]};
 
             case "FETCH_TECH3":
-            return {...state, all: action.payload};
+            return {...state, tech: [...state.tech, action.payload]};
 
             case "FETCH_TECH4":
-            return {...state, all: action.payload};
+            return {...state, tech: [...state.tech, action.payload]};
 
             default:
                 return state;

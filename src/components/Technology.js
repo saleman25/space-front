@@ -5,6 +5,7 @@ import { getTechOne } from '../actions/technologyActions';
 import { getTechTwo } from '../actions/technologyActions';
 import { getTechThree } from '../actions/technologyActions';
 import { getTechFour } from '../actions/technologyActions';
+import Project from '../components/Project';
 
 class Technology extends Component {
 
@@ -18,22 +19,19 @@ componentDidMount(){
 }
 
 displayTech(){
-    console.log(this.props.technology)
+    return this.props.tech.map(e => <Project technology={e} /> )
 }
 
 render(){
     return (
         <div>
-            <h1>{this.props.technology.title}</h1>
-            <p>{this.props.technology.startDate} - {this.props.technology.endDate}</p>
-            <h3>{this.props.technology.status}</h3>
-            <p>{this.props.technology.description}</p>
+           {this.displayTech()}
         </div>
     )
 }
 
 }
 
-const mapStateToProps = state => ({ technology: state.technology.all })
+const mapStateToProps = state => ({ tech: state.technology.tech })
 
 export default connect(mapStateToProps, { getTechnology, getTechOne, getTechTwo, getTechThree, getTechFour })(Technology);

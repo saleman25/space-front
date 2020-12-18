@@ -11,7 +11,7 @@ import '../css/opportunity.css';
 import '../css/spirit.css';
 
 class Rovies extends Component {
-
+state = { rove: null }
 // fetch call i think this needs to be an if statement
 componentDidMount(){
     this.props.getCuriosity();
@@ -20,46 +20,71 @@ componentDidMount(){
 }
 
 displayRover(){
-    return this.props.rover.map(e => <Rover rovies={e} /> )
+ switch (this.state.rove){
+     case 'Curiosity':
+     return this.mapCuriosity();
+     case 'Opportunity':
+     return this.mapOpportunity();
+        case 'Spirit':
+            return this.mapSpirit();
+             
+             default:
+              return null
+ }
+
 }
 
-handleOnClickCuri() {
-    
+handleOnClickCuri = (e) => {
+this.setState({rove: e.target.innerHTML})
+}
+
+mapCuriosity(){
+return this.props.curiosity.map(e => <Rover rover={e}/>)
+}
+
+mapOpportunity(){
+    return this.props.opportunity.map(e => <Rover rover={e}/>)
+}
+
+mapSpirit(){
+    return this.props.spirit.map(e => <Rover rover={e}/>)
 }
 
 render(){
+    console.log(this.props.curiosity)
     return (
         <div>
             <h1>Which Rover Pictures Would You Like to See?</h1>
                 <div class='roviesdivies'>
 
-                    <Link to="/curiosity" style={{ textDecoration: 'none' }}>
-                        <span className="curiosity" style={{"display": "block"}}>
+                    <button>
+                        <span className="curiosity" style={{"display": "block"}} onClick={this.handleOnClickCuri}>
                             Curiosity
                         </span>
-                    </Link>
+                    </button>
 
-                    <Link to="/opportunity" style={{ textDecoration: 'none' }}>
+                    <button>
                         <span className="opportunity" style={{"display": "block"}}>
                             Opportunity
                         </span>
-                    </Link>
+                    </button>
 
 
-                    <Link to="/spirit" style={{ textDecoration: 'none' }}>
+                    <button>
                         <span className="spirit" style={{"display": "block"}}>
                             Spirit
                         </span>
-                    </Link>
-
+                    </button>
+                    
                 </div>
+                {this.props.curiosity? this.displayRover(): null}
         </div>
     )
 }
 
 }
 
-const mapStateToProps = state => ({ rover: state.rover.all })
+const mapStateToProps = state => ({ curiosity: state.rover.curiosity, opportunity: state.rover.opportunity, spirit: state.rover.spirit })
 
 
 

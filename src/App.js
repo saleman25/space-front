@@ -18,9 +18,6 @@ function App() {
           <Route exact path="/astronomy" component={Astronomy} />
           <Route exact path="/technology" component={Technology} />
           <Route exact path="/rover" component={Rovies} />
-          <Route exact path="/curiosity" component={Rovies} />
-          <Route exact path="/opportunity" component={Rovies} />
-          <Route exact path="/spirit" component={Rovies} />
         </Switch>
       </Router>
     </div>
