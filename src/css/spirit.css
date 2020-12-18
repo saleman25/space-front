@@ -11,4 +11,9 @@
     background-position: center;
     background-size: cover;
     color: black;
- }
+    transition: height 2s;
+}
+
+.spirit:hover {
+    height: 300px
+}

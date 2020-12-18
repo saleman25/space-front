@@ -34,6 +34,7 @@ export const getSpirit = () => {
     };
 };
 
+// so it can save to my backend
 const roveObj = () => {
     return {rove: {
         camera_name: this.rover.camera.full_name,

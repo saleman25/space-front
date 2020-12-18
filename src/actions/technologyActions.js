@@ -89,7 +89,7 @@ export const getTechFour = () => {
     };
 };
 
-
+// so it can save to my backend
 const techObj = () => {
     return {tech: {
         title: this.title,

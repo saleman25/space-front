@@ -8,7 +8,8 @@ import '../css/divies.css';
 export default function Home(){
     return (
         <div>
-            <h1>Welcome</h1>
+            <h1>★ Welcome to a little about Space ★</h1>
+            <h4>Click on one to learn more!</h4>
                 <br></br>
                     <div class= 'divies'>
                         < Astronomycontainer />
