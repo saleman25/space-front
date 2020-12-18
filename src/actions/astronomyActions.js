@@ -16,6 +16,27 @@ export const getAstronomy = () => {
     };
 };
 
-// fetch(`localhost:3000/astronomy)
-// .then(resp) => resp.json
-// .then(result) => 
+
+// so it can save to my backend
+const astronomyObj = () => {
+    return {astronomy: {
+        explanation: this.explanation,
+        date: this.date,
+        url: this.url
+    }}
+};
+
+const createAstronomy = (astronomyObj) => {
+    fetch(`http://localhost:3000/astronomies`,{
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(astronomyObj)     
+    })
+    .then(resp => resp.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => {
+        console.log(error)
+    })
+};

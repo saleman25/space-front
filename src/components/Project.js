@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Project = (props) => {
 
+// const reactStringReplace = require('react-string-replace');
+
+const Project = (props) => {
+    
     return (
     
             <div>
@@ -13,6 +16,9 @@ const Project = (props) => {
     )
 }
 
+
+
 export default Project
 
 // other const to eliminate unwanted characters
+// .replace("[<p></p><sub></sub><a></a>]", "")

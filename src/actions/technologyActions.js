@@ -90,3 +90,27 @@ export const getTechFour = () => {
 };
 
 
+const techObj = () => {
+    return {tech: {
+        title: this.title,
+        description: this.description,
+        start_date: this.startDate,
+        end_date: this.endDate,
+        status: this.status
+    }}
+};
+
+const createTech = (techObj) => {
+    fetch(`http://localhost:3000/technologies`,{
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(techObj)     
+    })
+    .then(resp => resp.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => {
+        console.log(error)
+    })
+};

@@ -33,3 +33,28 @@ export const getSpirit = () => {
         );
     };
 };
+
+const roveObj = () => {
+    return {rove: {
+        camera_name: this.rover.camera.full_name,
+        camera_id: this.rover.camera.id,
+        rover_name: this.rover.name,
+        rover_id: this.rover.id,
+        img_source: this.rover.img_src
+    }}
+};
+
+const createRove = (roveObj) => {
+    fetch(`http://localhost:3000/rovers`,{
+        method: "POST",
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(roveObj)     
+    })
+    .then(resp => resp.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => {
+        console.log(error)
+    })
+};
