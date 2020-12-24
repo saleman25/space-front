@@ -22,10 +22,12 @@ displayTech(){
     return this.props.tech.map(e => <Project technology={e} /> )
 }
 
+
+
 render(){
     return (
         <div>
-            <h1>Most Viewed NASA Projects</h1>
+            
             {this.displayTech()}
         </div>
     )
@@ -36,3 +38,5 @@ render(){
 const mapStateToProps = state => ({ tech: state.technology.tech })
 
 export default connect(mapStateToProps, { getTechnology, getTechOne, getTechTwo, getTechThree, getTechFour })(Technology);
+
+

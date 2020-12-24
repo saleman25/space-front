@@ -1,7 +1,7 @@
-
+// this one
 export const getTechnology = () => {
     return (dispatch) => {
-       return fetch(`https://api.nasa.gov/techport/api/projects/33080?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
+       return fetch(`https://api.nasa.gov/techport/api/projects/94037?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) =>{
         const techObj = {
@@ -11,15 +11,16 @@ export const getTechnology = () => {
             endDate: result.project.endDate,
             status: result.project.status
         }
+       
         dispatch({ type: "FETCH_TECHNOLOGY", payload: techObj })
         }
         );
     };
 };
-
+// n this one
 export const getTechOne = () => {
     return (dispatch) => {
-       return fetch(`https://api.nasa.gov/techport/api/projects/11692?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
+       return fetch(`https://api.nasa.gov/techport/api/projects/94430?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) =>{
         const techObj = {
