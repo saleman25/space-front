@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { getCuriosity } from '../actions/roverActions';
 import { getOpportunity } from '../actions/roverActions';
 import { getSpirit } from '../actions/roverActions';
+import { getPerseverance } from '../actions/roverActions';
 import Rover from '../components/Rover';
 import '../css/roviesdivies.css';
 import '../css/curiosity.css';
@@ -16,16 +17,19 @@ componentDidMount(){
     this.props.getCuriosity();
     this.props.getOpportunity();
     this.props.getSpirit();
+    this.props.getPerseverance();
 }
 
 displayRover(){
  switch (this.state.rove){
-     case 'Curiosity':
-     return this.mapCuriosity();
-     case 'Opportunity':
-     return this.mapOpportunity();
-        case 'Spirit':
-            return this.mapSpirit();
+    case 'Curiosity':
+    return this.mapCuriosity();
+    case 'Opportunity':
+    return this.mapOpportunity();
+    case 'Spirit':
+    return this.mapSpirit();
+    case 'Perseverance':
+    return this.mapPerseverance();
              
              default:
               return null
@@ -48,6 +52,10 @@ mapOpportunity(){
 
 mapSpirit(){
     return this.props.spirit.map(e => <Rover rover={e}/>)
+}
+
+mapPerseverance(){
+    return this.props.perseverance.map(e => <Rover rover={e}/>)
 }
 
 render(){
@@ -80,8 +88,8 @@ render(){
 
 }
 
-const mapStateToProps = state => ({ curiosity: state.rover.curiosity, opportunity: state.rover.opportunity, spirit: state.rover.spirit })
+const mapStateToProps = state => ({ curiosity: state.rover.curiosity, opportunity: state.rover.opportunity, spirit: state.rover.spirit, perseverance: state.rover.perseverance })
 
 
 
-export default connect(mapStateToProps, { getCuriosity, getOpportunity, getSpirit })(Rovies);
+export default connect(mapStateToProps, { getCuriosity, getOpportunity, getSpirit, getPerseverance })(Rovies);
