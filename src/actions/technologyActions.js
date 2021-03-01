@@ -4,6 +4,7 @@ export const getTechnology = () => {
        return fetch(`https://api.nasa.gov/techport/api/projects/94037?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) =>{
+        
         const techObj = {
             title: result.project.title,
             description: result.project.description,
@@ -11,7 +12,7 @@ export const getTechnology = () => {
             endDate: result.project.endDate,
             status: result.project.status
         }
-       
+
         dispatch({ type: "FETCH_TECHNOLOGY", payload: techObj })
         }
         );
