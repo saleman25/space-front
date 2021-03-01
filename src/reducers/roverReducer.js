@@ -1,4 +1,4 @@
-const initialState = { curiosity: null, opportunity: null, spirit: null }
+const initialState = { curiosity: null, opportunity: null, spirit: null, perseverance: null }
 
 function roverReducer(state= initialState, action ) {
     switch (action.type) {
@@ -10,6 +10,9 @@ function roverReducer(state= initialState, action ) {
 
         case "FETCH_SPIRIT":
             return {...state, spirit: action.payload};
+
+        case "FETCH_PERSEVERANCE":
+            return {...state, perseverance: action.payload};   
 
             default:
                 return state;
