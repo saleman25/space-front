@@ -34,6 +34,18 @@ export const getSpirit = () => {
     };
 };
 
+export const getPerseverance = () => {
+    return (dispatch) => {
+        return fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/Perseverance/latest_photos?api_key=DEMO_KEY`)
+        .then((resp) => resp.json())
+        .then((result) => {
+            let perObj = result.photos.slice(0,5)
+        dispatch({ type: "FETCH_PERSEVERANCE", payload: perObj })
+        }
+        );
+    };
+};
+
 // so it can save to my backend
 const roveObj = () => {
     return {rove: {
