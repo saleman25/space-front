@@ -78,6 +78,10 @@ render(){
                         <div className="spirit" style={{"display": "block"}} onClick={this.handleOnClickCuri}>
                             Spirit
                         </div>
+
+                        <div className="perseverance" style={{"display": "block"}} onClick={this.handleOnClickCuri}>
+                            Perseverance
+                        </div>
                     
                     
                 </div>

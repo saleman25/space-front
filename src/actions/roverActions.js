@@ -39,7 +39,7 @@ export const getPerseverance = () => {
         return fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/Perseverance/latest_photos?api_key=bS7Kb4VfcpKaKmarzxrfcYlg8CJGzJ9m6CIajasm`)
         .then((resp) => resp.json())
         .then((result) => {
-            let perObj = result.photos.slice(0,5)
+            let perObj = result.latest_photos.slice(0,5)
         dispatch({ type: "FETCH_PERSEVERANCE", payload: perObj })
         }
         );
