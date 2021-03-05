@@ -1,0 +1,19 @@
+.perseverance{
+    border-style: solid;
+    border-color: black;
+    width: 15vw;
+    height: 15vw;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    background-image: url("../images/perseverance.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: black;
+    transition: height 2s;
+}
+
+.perseverance:hover {
+    height: 300px
+}
