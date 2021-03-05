@@ -9,6 +9,7 @@ import '../css/roviesdivies.css';
 import '../css/curiosity.css';
 import '../css/opportunity.css';
 import '../css/spirit.css';
+import '../css/perseverance.css';
 
 class Rovies extends Component {
 state = { rove: null }
